@@ -483,7 +483,7 @@ client.on('message', message => {
      
       let args = message.content.split(" ").slice(1);
      
-      if (command == "kick") {
+      if (command == "@kick") {
                    if(!message.channel.guild) return;
              
       if(!message.guild.member(message.author).hasPermission("KICK_MEMBERS")) return message.reply("You Don't Have KICK_MEMBERS Permission").then(msg => msg.delete(5000));
@@ -511,7 +511,7 @@ client.on('message', message => {
 
 // كود مسح الشات مطور btrolie 
 client.on('message', message => {
-    var prefix = "!";
+    var prefix = "@";
    if(!message.channel.guild) return;
 if(message.content.startsWith(prefix + 'clear')) {
 if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
@@ -554,7 +554,7 @@ msg.delete();
 //فتح وقفل الشات
 client.on('message', message => {
 
-    if(message.content === "!closec") {
+    if(message.content === "@closec") {
                         if(!message.channel.guild) return message.reply('** This command only for servers ❌ **');
 
 if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply
@@ -566,7 +566,7 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply
            });
              }
 
- if(message.content === "!openc") {
+ if(message.content === "@openc") {
                      if(!message.channel.guild) return message.reply('** This command only for servers ❌ **');
 
 if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply
@@ -666,7 +666,7 @@ if (message.content.toLowerCase().startsWith(prefix + 'banlist')){
  //رتب btrolie
  
  client.on('message', message => {
-    if (message.content === "!createroles") {
+    if (message.content === "@createroles") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**`);
 
@@ -744,7 +744,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "!mute") {
+    if (command === "@mute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'log');
@@ -806,7 +806,7 @@ client.on("message", message => {
   });
 //user btrolie
 client.on("message", msg => {
-    var prefix = '!'//البركفس
+    var prefix = '@'//البركفس
     if(msg.content.startsWith(prefix + 'user')){
       let embed = new Discord.RichEmbed()
       .setThumbnail(msg.guild.iconURL)
