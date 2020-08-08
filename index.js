@@ -46,7 +46,7 @@ client.on('message', message => {
      .addField("✽- **@help general  ≤ ≥  『 أوامر العامه 』**",' ‎ ')
      .addField("✽- **@help games  ≤ ≥  『 أوامر ألالعاب 』**",' ‎ ')
      .addField("✽- **@help protection  ≤ ≥  『 أوامر ألحمايه 』**",' ‎ ')
-
+     .addField("✽- **لاضافة البوت ل سيرفرك  ≤ ≥  『 https://discord.com/oauth2/authorize?client_id=740228137497001995&permissions=8&scope=bot 』**",' ‎ ')
 	 
      .setFooter('Made By OK | ＺＥＮＵＸ')
 
