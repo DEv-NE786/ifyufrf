@@ -31,7 +31,7 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
           client.user.setActivity("@help",{type: 'PLAYING'});
   
-  }
+  });
 client.on('message', message => {
     if (message.author.bot) return;
      if (message.content  === prefix + "help") {
