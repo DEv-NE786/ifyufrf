@@ -1,3 +1,6 @@
+client.on('message',async message => {
+  if(message.author.bot) return;
+	
 require('events').EventEmitter.defaultMaxListeners = 1000
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -1177,9 +1180,6 @@ const Sra7a = [
    message.react("??")
  }
 });
-
-client.on('message',async message => {
-  if(message.author.bot) return;
 	
 const args = message.content.split(' ');  if(message.channel.type === 'dm') return;
 	
