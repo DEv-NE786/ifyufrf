@@ -1174,6 +1174,7 @@ const Sra7a = [
    message.react("??")
  }
 });
+
 const cool = [];
 client.on('message',async message => {
   if(message.author.bot) return;
