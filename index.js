@@ -1,9 +1,9 @@
+const Discord = require('discord.js');
+const client = new Discord.Client();
 client.on('message',async message => {
   if(message.author.bot) return;
 	
 require('events').EventEmitter.defaultMaxListeners = 1000
-const Discord = require('discord.js');
-const client = new Discord.Client();
 const cmd = require("node-cmd");
 const ms = require("ms");
 const fs = require('fs');
