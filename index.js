@@ -1178,6 +1178,11 @@ const Sra7a = [
    message.react("??")
  }
 });
+
+client.on('message',async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === 'dm') return;
+
 if(!credits[author]) credits[author] = {credits: 50};
   if(!credits[mention.id]) credits[mention.id] = {credits: 50};
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
