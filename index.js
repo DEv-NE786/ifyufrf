@@ -130,6 +130,7 @@ client.on('message', message => {
 	.addField("✽- **@credits ↠  『 يعرض عدد الكردتس التي تمتلكها 』**",' ‎ ')
 	.addField("✽- **@daily ↠  『 لاخذ اليومية خاصتك 』**",' ‎ ')
 	.addField("✽- **@new ↠  『 لفتح تكت 』**",' ‎ ')
+	.addField("✽- **@close ↠  『 لاغلاق التكت الحالية 』**",' ‎ ')
  	.addField("✽- **@user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
  	.addField("✽- **@server ↠  『 يعرض معلومات السيرفر 』**",' ‎ ')
  	.addField("✽- **@short <link> ↠  『 اختصار روابط 』**",' ‎ ')
@@ -1301,7 +1302,7 @@ client.on('message', async message => {
   if (message.content.startsWith(prefix + 'close')) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتبconfirm`)
+       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب **confirm**`)
            .then((m) => {
                message.channel.awaitMessages(response => response.content === 'confirm', {
                        max: 1,
