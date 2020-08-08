@@ -566,7 +566,7 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply
          SEND_MESSAGES: false
 
            }).then(() => {
-               message.reply("** ✖ | امر وطاعه يامولاي الشات مغلق  **")
+               message.reply("** ✖ | ابشر يامولاي الشات مغلق  **")
            });
              }
 
@@ -578,7 +578,7 @@ if(!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply
          SEND_MESSAGES: true
 
            }).then(() => {
-               message.reply("**べ | امر وطاعه يامولاي تم فتح الشات **")
+               message.reply("**べ | ابشر يامولاي تم فتح الشات **")
            });
              }
              
@@ -781,7 +781,7 @@ client.on("message", message => {
     
     let command = message.content.split(" ")[0];
     
-    if (command === "!unmute") {
+    if (command === "@unmute") {
           if (!message.member.hasPermission('MANAGE_ROLES')) return message.reply("** لا يوجد لديك برمشن 'Manage Roles' **").catch(console.error);
     let user = message.mentions.users.first();
     let modlog = client.channels.find('name', 'mute-log');
@@ -830,7 +830,7 @@ client.on("message", msg => {
   //server btrolie 
   client.on('message', message => {
 
-    if (message.content === "!server") {
+    if (message.content === "@server") {
 var year = message.guild.createdAt.getFullYear()
 var month = message.guild.createdAt.getMonth()
 var day = message.guild.createdAt.getDate()
@@ -856,7 +856,7 @@ var day = message.guild.createdAt.getDate()
 //bot btrolie 
 
 client.on('message', message => {
-    if(message.content === "!bot") {
+    if(message.content === "@bot") {
         const embed = new Discord.RichEmbed()
         .setColor("#00FFFF")
   .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
@@ -902,7 +902,7 @@ client.on('message', message => {
 //m3lomat inv btrolie 
 
 client.on('message', async message => {
-var prefix = '!' /// البريفكس هون غيره يا بعد قلبي
+var prefix = '@' /// البريفكس هون غيره يا بعد قلبي
 if(message.content.startsWith( prefix + 'infoinvite')) { //// وهون الامر طبعا
         let oi = message.mentions.users.first() ? message.mentions.users.first().id : message.author.id;
         let Tag = message.mentions.users.first() ? message.mentions.users.first().tag : message.author.tag;
