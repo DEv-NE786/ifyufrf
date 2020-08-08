@@ -1070,7 +1070,7 @@ var viper = ["https://f.top4top.net/p_682it2tg6.png%22","https://e.top4top.net/p
       if(!message.channel.guild) return message.reply('** ممنوع كتابة الاوامر في خاص البوت**');
          var lo = new Discord.RichEmbed()
 	 .setImage(viper[Math.floor(Math.random() * viper.length)])
-	 message.channel.sendEmbed(lo);
+ message.channel.sendEmbed(lo);
     }
 });
 //fkk btrolie 
