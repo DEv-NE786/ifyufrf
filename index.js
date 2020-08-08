@@ -23,7 +23,7 @@ const dateFormat = require('dateformat');
 
 
 
-const prefix = "!"//لاتغير البرفكس
+const prefix = "@"//لاتغير البرفكس
 const developers = "706161534233083964"//ايديك
 
 ////////
@@ -38,10 +38,10 @@ client.on('message', message => {
      .setTimestamp()
 
      .addField("۩***⦁⦓ فائمه الاوامر   ⦔⦁***۩",' ‎ ')
-     .addField("✽- **!help admin  ≤ ≥   『 أوامر الادمن 』**",' ‎ ')
-     .addField("✽- **!help general  ≤ ≥  『 أوامر العامه 』**",' ‎ ')
-     .addField("✽- **!help games  ≤ ≥  『 أوامر ألالعاب 』**",' ‎ ')
-     .addField("✽- **!help protection  ≤ ≥  『 أوامر ألحمايه 』**",' ‎ ')
+     .addField("✽- **@help admin  ≤ ≥   『 أوامر الادمن 』**",' ‎ ')
+     .addField("✽- **@help general  ≤ ≥  『 أوامر العامه 』**",' ‎ ')
+     .addField("✽- **@help games  ≤ ≥  『 أوامر ألالعاب 』**",' ‎ ')
+     .addField("✽- **@help protection  ≤ ≥  『 أوامر ألحمايه 』**",' ‎ ')
 
 	 
      .setFooter('Made By OK | ＺＥＮＵＸ')
@@ -64,19 +64,19 @@ client.on('message', message => {
         .setTimestamp()
 
         .addField("۩***⦁⦓ أوامر الادمن  ⦔⦁***۩",' ‎ ')
-        .addField("✽- **!ban ↠  『 لتبنيد شخص من سيرفر 』**",' ‎ ')
-	.addField("✽- **!kick ↠  『 لطرد شخص من السيرفر 』**",' ‎ ')
- 	.addField("✽- **!clear ↠  『 مسح الشات 』**",' ‎ ')
- 	.addField("✽- **!openc ↠  『 فتح الشات 』**",' ‎ ')
- 	.addField("✽- **!closec ↠  『 قفل الشات 』**",' ‎ ')
- 	.addField("✽- **!move @user ↠  『 لسحب شخص الى روم صوتي 』**",' ‎ ')	  
- 	.addField("✽- **!grole ↠  『 يوريك معلومات رتبه محدده 』**",' ‎ ')
- 	.addField("✽- **!banlist ↠  『  يوريك كل الي مبندين بسيرفر  』**",' ‎ ')	  
- 	.addField("✽- **!createroles ↠  『 يصنع لك رتب  』**",' ‎ ')
- 	.addField("✽- **!role #user rank ↠  『 بعطي رتبه لشخص معين 』**",' ‎ ')
- 	.addField("✽- **!role all rank  ↠  『 يعطي رتبه لكل الاشخاص 』**",' ‎ ')
- 	.addField("✽- **!mute ↠  『 لاعطاء ميوت لشخص 』**",' ‎ ')
-	.addField("✽- **!unmute ↠  『 فك الميوت 』**",' ‎ ') 
+        .addField("✽- **@ban ↠  『 لتبنيد شخص من سيرفر 』**",' ‎ ')
+	.addField("✽- **@kick ↠  『 لطرد شخص من السيرفر 』**",' ‎ ')
+ 	.addField("✽- **@clear ↠  『 مسح الشات 』**",' ‎ ')
+ 	.addField("✽- **@openc ↠  『 فتح الشات 』**",' ‎ ')
+ 	.addField("✽- **@closec ↠  『 قفل الشات 』**",' ‎ ')
+ 	.addField("✽- **@move @user ↠  『 لسحب شخص الى روم صوتي 』**",' ‎ ')	  
+ 	.addField("✽- **@grole ↠  『 يوريك معلومات رتبه محدده 』**",' ‎ ')
+ 	.addField("✽- **@banlist ↠  『  يوريك كل الي مبندين بسيرفر  』**",' ‎ ')	  
+ 	.addField("✽- **@createroles ↠  『 يصنع لك رتب  』**",' ‎ ')
+ 	.addField("✽- **@role #user rank ↠  『 بعطي رتبه لشخص معين 』**",' ‎ ')
+ 	.addField("✽- **@role all rank  ↠  『 يعطي رتبه لكل الاشخاص 』**",' ‎ ')
+ 	.addField("✽- **@mute ↠  『 لاعطاء ميوت لشخص 』**",' ‎ ')
+	.addField("✽- **@unmute ↠  『 فك الميوت 』**",' ‎ ') 
 	.setFooter('Made By OK | ＺＥＮＵＸ')
 
 
@@ -98,12 +98,12 @@ client.on('message', message => {
         .setTimestamp()
 
  	.addField("۩***⦁⦓ أوامر ألالعاب  ⦔⦁***۩",' ‎ ')
- 	.addField("✽- **!rps ↠  『 حجره ورقه مقص 』**",' ‎ ')
- 	.addField("✽- **!cut ↠  『 كت تويت 』**",' ‎ ')
-	.addField("✽- **!lo5 ↠  『 لوخيروك 』**",' ‎ ')
-	.addField("✽- **!fkk ↠  『 لعبه فكك 』**",' ‎ ')
-	.addField("✽- **!sr3 ↠  『 لعبه اسرع 』**",' ‎ ')	
-	.addField("✽- **!sr7 ↠  『 لعبه صراحه 』**",' ‎ ')	  
+ 	.addField("✽- **@rps ↠  『 حجره ورقه مقص 』**",' ‎ ')
+ 	.addField("✽- **@cut ↠  『 كت تويت 』**",' ‎ ')
+	.addField("✽- **@lo5 ↠  『 لوخيروك 』**",' ‎ ')
+	.addField("✽- **@fkk ↠  『 لعبه فكك 』**",' ‎ ')
+	.addField("✽- **@sr3 ↠  『 لعبه اسرع 』**",' ‎ ')	
+	.addField("✽- **@sr7 ↠  『 لعبه صراحه 』**",' ‎ ')	  
 	.addField("**⊙سيتم وضع المزيد في اصدار البوت v2⊙**",' ‎ ')
 
         .setFooter('Made By OK | ＺＥＮＵＸ')
@@ -126,16 +126,17 @@ client.on('message', message => {
         .setTimestamp()
 
  	.addField("۩***⦁⦓ أوامر العامه  ⦔⦁***۩",' ‎ ')
-	.addField("✽- **!user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
-	.addField("✽- **!credits ↠  『 يعرض عدد الكردتس التي تمتلكها 』**",' ‎ ')
-	.addField("✽- **!daily ↠  『 لاخذ اليومية خاصتك 』**",' ‎ ')
- 	.addField("✽- **!user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
- 	.addField("✽- **!server ↠  『 يعرض معلومات السيرفر 』**",' ‎ ')
- 	.addField("✽- **!short <link> ↠  『 اختصار روابط 』**",' ‎ ')
- 	.addField("✽- **!ping ↠  『 يعرض لك البنق 』**",' ‎ ')
- 	.addField("✽- **!infoinvite ↠  『 معلومات الانفايت حقك  』**",' ‎ ')
- 	.addField("✽- **!member ↠  『 حاله الاعضاء 』**",' ‎ ')	  
- 	.addField("✽- **!id ↠  『 معلومات حسابك  』**",' ‎ ')	  
+	.addField("✽- **@user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
+	.addField("✽- **@credits ↠  『 يعرض عدد الكردتس التي تمتلكها 』**",' ‎ ')
+	.addField("✽- **@daily ↠  『 لاخذ اليومية خاصتك 』**",' ‎ ')
+	.addField("✽- **@new ↠  『 لفتح تكت 』**",' ‎ ')
+ 	.addField("✽- **@user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
+ 	.addField("✽- **@server ↠  『 يعرض معلومات السيرفر 』**",' ‎ ')
+ 	.addField("✽- **@short <link> ↠  『 اختصار روابط 』**",' ‎ ')
+ 	.addField("✽- **@ping ↠  『 يعرض لك البنق 』**",' ‎ ')
+ 	.addField("✽- **@infoinvite ↠  『 معلومات الانفايت حقك  』**",' ‎ ')
+ 	.addField("✽- **@member ↠  『 حاله الاعضاء 』**",' ‎ ')	  
+ 	.addField("✽- **@id ↠  『 معلومات حسابك  』**",' ‎ ')	  
  	.addField("**⊙سيتم وضع المزيد في اصدار البوت v2⊙**",' ‎ ')
 
         .setFooter('Made By OK | ＺＥＮＵＸ')
@@ -156,13 +157,13 @@ client.on('message', message => {
          .setTimestamp()
 
 	 .addField("۩***⦁⦓  أوامر ألحمايه  ⦔⦁***۩",' ‎ ')
-	 .addField("✽- **!limitbans ↠  『 عدد الاشخاص الي يتبندون والبوت يبند الشخص 』**",' ‎ ')
-	 .addField("✽- **!limitkicks ↠  『  عدد الاشخاص  لي ينطرودون بعدها البوت يبند الشخص 』**",' ‎ ')
-	 .addField("✽- **!limitroleDelete ↠  『 عدد الرتب الي تنحذف بعدها البوت يبند الشخص 』**",' ‎ ')
-	 .addField("✽- **!limitchannelDelete ↠  『 عدد الرومات الي تنحذف بعدها البوت يبند الشخص 』**",' ‎ ')
-	 .addField("✽- **!limittime 1000 ↠  『 اكتب ذا الامر بعد متخلص تفعيل الحمايه 』**",' ‎ ')
-	 .addField("✽- **!antibots on ↠  『 منع دخول البوتات شغال 』**",' ‎ ')	  
-	 .addField("✽- **!antibots off ↠  『 منع دخول البوتات ايقاف 』**",' ‎ ')	  
+	 .addField("✽- **@limitbans ↠  『 عدد الاشخاص الي يتبندون والبوت يبند الشخص 』**",' ‎ ')
+	 .addField("✽- **@limitkicks ↠  『  عدد الاشخاص  لي ينطرودون بعدها البوت يبند الشخص 』**",' ‎ ')
+	 .addField("✽- **@limitroleDelete ↠  『 عدد الرتب الي تنحذف بعدها البوت يبند الشخص 』**",' ‎ ')
+	 .addField("✽- **@limitchannelDelete ↠  『 عدد الرومات الي تنحذف بعدها البوت يبند الشخص 』**",' ‎ ')
+	 .addField("✽- **@limittime 1000 ↠  『 اكتب ذا الامر بعد متخلص تفعيل الحمايه 』**",' ‎ ')
+	 .addField("✽- **@antibots on ↠  『 منع دخول البوتات شغال 』**",' ‎ ')	  
+	 .addField("✽- **@antibots off ↠  『 منع دخول البوتات ايقاف 』**",' ‎ ')	  
 	 .addField("**⊙سيتم وضع المزيد في اصدار البوت v2⊙**",' ‎ ')
 
 	 .setFooter('Made By OK | ＺＥＮＵＸ')
@@ -1262,6 +1263,62 @@ const daily = Math.floor(Math.random() * 350) + 10;
       message.author.send("**:atm: | \`Daily\`, يمكنك الحصول على الكردت المجانية الان**").catch();
     }, ms("1d"));
   }
+});
+
+client.on('message', async message => {
+ 
+   if (message.content.startsWith(prefix + 'new')) {  
+        const reason = message.content.split(" ").slice(1).join(" ");  
+        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`لازم تسوي رتبة اسمها \`Support Team\` وتنطي البوت ادمنيتر حتا يقدر يسوي الرومات ويعدل برمشنات`);
+        if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
+        message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
+            let role = message.guild.roles.find("name", "Support Team");
+            let role2 = message.guild.roles.find("name", "@everyone");
+            c.overwritePermissions(role, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });  
+            c.overwritePermissions(role2, {
+                SEND_MESSAGES: false,
+                READ_MESSAGES: false
+            });
+            c.overwritePermissions(message.author, {
+                SEND_MESSAGES: true,
+                READ_MESSAGES: true
+            });
+            message.channel.send(`:white_check_mark: تم بنجاح انشاء التذكره, #${c.name}.`);
+            const embed = new Discord.RichEmbed()
+                .setColor(d1631e)
+                .addField(`Hey ${message.author.username}!`, `:white_check_mark:  تم بنجاح انشاء التذكره, #ticket`)
+                .setTimestamp();
+            c.send({
+                embed: embed
+            });
+        }).catch(console.error);
+    }
+ 
+ 
+  if (message.content.startsWith(prefix + 'close')) {
+        if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
+ 
+       message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتبconfirm`)
+           .then((m) => {
+               message.channel.awaitMessages(response => response.content === 'confirm', {
+                       max: 1,
+                       time: 10000,
+                       errors: ['time'],
+                   })  
+                   .then((collected) => {
+                       message.channel.delete();
+                   })  
+                   .catch(() => {
+                       m.edit('لم يتم تقفيل التكت').then(m2 => {
+                           m2.delete();
+                       }, 3000);
+                   });
+           });
+   }
+ 
 });
 
 client.login(process.env.TOKEN)//توكن بوتك
