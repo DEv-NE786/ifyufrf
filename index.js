@@ -1,4 +1,4 @@
-require('events').EventEmitter.defaultMaxListeners = 40
+require('events').EventEmitter.defaultMaxListeners = 1000
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const cmd = require("node-cmd");
