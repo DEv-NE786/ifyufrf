@@ -139,7 +139,7 @@ client.on('message', message => {
  	.addField("✽- **@server ↠  『 يعرض معلومات السيرفر 』**",' ‎ ')
  	.addField("✽- **@short <link> ↠  『 اختصار روابط 』**",' ‎ ')
  	.addField("✽- **@ping ↠  『 يعرض لك البنق 』**",' ‎ ')
- 	.addField("✽- **@infoinvite ↠  『 معلومات الانفايت حقك  』**",' ‎ ')
+ 	.addField("✽- **@invite ↠  『 معلومات الانفايت حقك  』**",' ‎ ')
  	.addField("✽- **@member ↠  『 حاله الاعضاء 』**",' ‎ ')	  
  	.addField("✽- **@id ↠  『 معلومات حسابك  』**",' ‎ ')	  
  	.addField("**⊙سيتم وضع المزيد في اصدار البوت v2⊙**",' ‎ ')
