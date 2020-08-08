@@ -135,7 +135,6 @@ client.on('message', message => {
 	.addField("✽- **@daily ↠  『 لاخذ اليومية خاصتك 』**",' ‎ ')
 	.addField("✽- **@new ↠  『 لفتح تكت 』**",' ‎ ')
 	.addField("✽- **@close ↠  『 لاغلاق التكت الحالية 』**",' ‎ ')
- 	.addField("✽- **@user ↠  『 يعرض معلومات انشاء حسابك 』**",' ‎ ')
  	.addField("✽- **@server ↠  『 يعرض معلومات السيرفر 』**",' ‎ ')
  	.addField("✽- **@short <link> ↠  『 اختصار روابط 』**",' ‎ ')
  	.addField("✽- **@ping ↠  『 يعرض لك البنق 』**",' ‎ ')
