@@ -19,7 +19,6 @@ const pretty = require("pretty-ms");
 const moment = require('moment');
 const request = require('request');
 const dateFormat = require('dateformat');
-const args = message.content.split(' ');
 const credits = require('./credits.json');
 const path = './credits.json';
 const mention = message.mentions.users.first() || client.users.get(args[1]) || message.author;
@@ -1181,8 +1180,9 @@ const Sra7a = [
 
 client.on('message',async message => {
   if(message.author.bot) return;
-  if(message.channel.type === 'dm') return;
-
+	
+const args = message.content.split(' ');  if(message.channel.type === 'dm') return;
+	
 if(!credits[author]) credits[author] = {credits: 50};
   if(!credits[mention.id]) credits[mention.id] = {credits: 50};
   fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
