@@ -933,9 +933,6 @@ if(message.content.startsWith( prefix + 'invite')) { //// وهون الامر ط
             .setFooter(Tag, Avatar)
            
             message.channel.send(inviteInfo);
-if(message.content.startsWith( prefix + 'delinvite')) {
-          io.inviteCount = 0
-}
             });
     };
 });
@@ -1309,7 +1306,7 @@ client.on('message', async message => {
     }
  
  
-  if (message.content.startsWith(prefix + 'close')) {
+  if (message.content == "prefix + 'close'") {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
        message.channel.send(`هل انت متأكد من اقفالك للتذكرة اذا متأكد اكتب **confirm**`)
