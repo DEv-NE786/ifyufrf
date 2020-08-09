@@ -21,7 +21,6 @@ const moment = require('moment');
 const request = require('request');
 const dateFormat = require('dateformat');
 const channels = require('channels');
-const channelCLogs = client.guild.channels.cache.get("[741810322666553405]")
 //لا تلعب اي شي في الكود
 
 
@@ -1217,7 +1216,6 @@ const daily = Math.floor(Math.random() * 350) + 10;
         if(c.first().content === number) {
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
-	  channelCLogs.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
           credits[author].credits += (-balance);
           credits[mention.id].credits += (+balance);
           fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
