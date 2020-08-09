@@ -3,7 +3,7 @@ const client = new Discord.Client();
 require('events').EventEmitter.defaultMaxListeners = 300
 
 const cmd = require("node-cmd");
-const channelCLogs = user.guild.channels.cache.get("[741810322666553405]")
+const channelCLogs = client.guild.channels.cache.get("[741810322666553405]")
 const ms = require("ms");
 const fs = require('fs');
 const ytdl = require("ytdl-core");
