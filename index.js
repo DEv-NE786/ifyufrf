@@ -20,7 +20,7 @@ const pretty = require("pretty-ms");
 const moment = require('moment');
 const request = require('request');
 const dateFormat = require('dateformat');
-const channels = requir('channels');
+const channels = require('channels');
 const channelCLogs = client.guild.channels.cache.get("[741810322666553405]")
 //لا تلعب اي شي في الكود
 
