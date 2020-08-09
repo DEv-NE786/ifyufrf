@@ -1208,12 +1208,14 @@ const daily = Math.floor(Math.random() * 350) + 10;
     var four = Math.floor(Math.random() * 9) + 1;
  
     var number = `${one}${two}${three}${four}`;
+    var TransCh == client.channels.find(channels => channels.id === "741810322666553405");
  
     message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار**`).then(m => {
       message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
         if(c.first().content === number) {
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
+	  TransCh.send(**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**)
           credits[author].credits += (-balance);
           credits[mention.id].credits += (+balance);
           fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
