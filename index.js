@@ -1214,9 +1214,9 @@ const daily = Math.floor(Math.random() * 350) + 10;
       message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
         if(c.first().content === number) {
           m.delete();
-          message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
-	  TransCh.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`)
-	  client.users.get(mention.id).send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`)
+          message.channel.send(`**:atm:| ${mention}, قام بتحويل \`${balance}\` لـ ${message.author.username}**`);
+	  TransCh.send(`**:atm:| ${mention}, قام بتحويل \`${balance}\` لـ ${message.author.username}**`)
+	  client.users.get(mention.id).send(`**:atm:| ${mention}, قام بتحويل \`${balance}\` لـ ${message.author.username}**`)
           credits[author].credits += (-balance);
           credits[mention.id].credits += (+balance);
           fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
