@@ -933,6 +933,9 @@ if(message.content.startsWith( prefix + 'invite')) { //// وهون الامر ط
             .setFooter(Tag, Avatar)
            
             message.channel.send(inviteInfo);
+if(message.content.startsWith( prefix + 'delinvite')) {
+          io.inviteCount = 0
+}
             });
     };
 });
