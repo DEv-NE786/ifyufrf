@@ -902,7 +902,7 @@ client.on('message', message => {
 
 client.on('message', async message => {
 var prefix = '@' /// البريفكس هون غيره يا بعد قلبي
-if(message.content.startsWith( prefix + 'invite')) { //// وهون الامر طبعا
+if(message.content.startsWith('@invite')) { //// وهون الامر طبعا
         let oi = message.mentions.users.first() ? message.mentions.users.first().id : message.author.id;
         let Tag = message.mentions.users.first() ? message.mentions.users.first().tag : message.author.tag;
         let Username = message.mentions.users.first() ? message.mentions.users.first().username : message.author.username;
