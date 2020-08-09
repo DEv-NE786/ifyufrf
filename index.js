@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-require('events').EventEmitter.defaultMaxListeners = 99999
+require('events').EventEmitter.defaultMaxListeners = 300
 
 const cmd = require("node-cmd");
 const ms = require("ms");
@@ -956,7 +956,7 @@ client.on('message', message => {
   //id btrolie 
   
   client.on("message", msg => {
-    var prefix = "!";
+    var prefix = "@";
 if(msg.content.startsWith (prefix + "id")) {
 if(!msg.channel.guild) return msg.reply('**:x: اسف لكن هذا الامر للسيرفرات فقط **');         
 const embed = new Discord.RichEmbed();
@@ -1215,7 +1215,7 @@ const daily = Math.floor(Math.random() * 350) + 10;
         if(c.first().content === number) {
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
-	  message.channel.get('741810322666553405').send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
+	  message.channels.get('741810322666553405').send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
           credits[author].credits += (-balance);
           credits[mention.id].credits += (+balance);
           fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
