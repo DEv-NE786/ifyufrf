@@ -1208,7 +1208,7 @@ const daily = Math.floor(Math.random() * 350) + 10;
     var four = Math.floor(Math.random() * 9) + 1;
  
     var number = `${one}${two}${three}${four}`;
-    var TransCh == client.channels.find(channels => channels.id === "741810322666553405");
+    var TransCh = client.channels.find(channels => channels.id == "741810322666553405");
  
     message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار**`).then(m => {
       message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
