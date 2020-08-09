@@ -1216,6 +1216,7 @@ const daily = Math.floor(Math.random() * 350) + 10;
           m.delete();
           message.channel.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`);
 	  TransCh.send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`)
+	  client.users.get(mention.id).send(`**:atm:| ${message.author.username}, قام بتحويل \`${balance}\` لـ ${mention}**`)
           credits[author].credits += (-balance);
           credits[mention.id].credits += (+balance);
           fs.writeFile(path, JSON.stringify(credits, null, 5), function(err) {if(err) console.log(err)});
