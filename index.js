@@ -3,7 +3,6 @@ const client = new Discord.Client();
 require('events').EventEmitter.defaultMaxListeners = 300
 
 const cmd = require("node-cmd");
-const channelCLogs = client.guild.channels.cache.get("[741810322666553405]")
 const ms = require("ms");
 const fs = require('fs');
 const ytdl = require("ytdl-core");
@@ -20,7 +19,9 @@ const getYoutubeID = require('get-youtube-id');
 const pretty = require("pretty-ms");
 const moment = require('moment');
 const request = require('request');
-const dateFormat = require('dateformat');	
+const dateFormat = require('dateformat');
+const channels = requir('channels');
+const channelCLogs = client.guild.channels.cache.get("[741810322666553405]")
 //لا تلعب اي شي في الكود
 
 
@@ -1165,7 +1166,7 @@ const Sra7a = [
    client.on('message', message => {
  if(message.content.startsWith(prefix + 'sr7')) {
   if(!message.channel.guild) return message.reply('** ممنوع كتابة الاوامر في خاص البوت**');
-  var client= new Discord.RichEmbed()
+  var client = new Discord.RichEmbed()
   .setTitle("لعبة صراحة ..")
   .setColor('RANDOM')
   .setDescription(`${Sra7a[Math.floor(Math.random() * Sra7a.length)]}`)
