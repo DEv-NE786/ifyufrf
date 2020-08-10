@@ -5,7 +5,6 @@ const { readdirSync } = require("fs");
 const { join } = require("path");
 const { PREFIX } = require("./config.json");
 const client = new Client({ disableMentions: "everyone" });
-client.login(process.env.TOKEN);
 client.commands = new Collection();
 client.prefix = PREFIX;
 client.queue = new Map();
