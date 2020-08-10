@@ -1,8 +1,17 @@
-const Discord = require('discord.js');
-const { join } = require("path");
-const client = new Discord.Client();
-require('events').EventEmitter.defaultMaxListeners = 300
+
+const Discord = require("discord.js");
+const { Client, Collection } = require("discord.js");
 const { readdirSync } = require("fs");
+const { join } = require("path");
+const { PREFIX } = require("./config.json");
+const client = new Client({ disableMentions: "everyone" });
+client.login(process.env.TOKEN);
+client.commands = new Collection();
+client.prefix = PREFIX;
+client.queue = new Map();
+const cooldowns = new Collection();
+const escapeRegex = (str) => str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+require('events').EventEmitter.defaultMaxListeners = 300
 const cmd = require("node-cmd");
 const ms = require("ms");
 const fs = require('fs');
