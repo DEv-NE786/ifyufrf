@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 require('events').EventEmitter.defaultMaxListeners = 300
-
+const { readdirSync } = require("fs");
 const cmd = require("node-cmd");
 const ms = require("ms");
 const fs = require('fs');
