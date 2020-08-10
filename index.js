@@ -1400,9 +1400,7 @@ var value = cmds[key];
   }
 })
 
-const getYoutubeID = require('get-youtube-id');
-const fetchVideoInfo = require('youtube-info');
-const YouTube = require('simple-youtube-api');
+
 const youtube = new YouTube("AIzaSyApFg4t8RUKVHjeXl3VUFJMVT-V1WuaiHM"); //تعديل مهم عدل الاي بي اي بواحد جديد او خليه زي ماهو
 
 
