@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const { join } = require("path");
 const client = new Discord.Client();
 require('events').EventEmitter.defaultMaxListeners = 300
 const { readdirSync } = require("fs");
