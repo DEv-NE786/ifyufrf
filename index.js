@@ -1352,7 +1352,6 @@ return msg.channel.send(`${content ? content : 'Failed to emojify'}`);
 });
 
 const winstonLogger = require('./classes/logger.js');
-const fs = require('fs');
 const chalk = require('chalk');
 const db = require('node-json-db');
 
