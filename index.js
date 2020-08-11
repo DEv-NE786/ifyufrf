@@ -1366,11 +1366,5 @@ client.music.start(client, {
   // Set the api key used for YouTube.
   // This is required to run the bot.
   youtubeKey: "AIzaSyCgLBLM8Uv1xBFhnvKJ4g7paf8JSUMQVFg"
-  cooldown: {
-    // This disables the cooldown. Not recommended.
-    enabled: true
-    }
-    let prefix = "@"
-	
 });
 client.login(process.env.TOKEN)//توكن بوتك
