@@ -1371,6 +1371,8 @@ client.music.start(client, {
   cooldown: {
     // This disables the cooldown. Not recommended.
     enabled: true
+    }
     let prefix = "@"
+	
 });
 client.login(process.env.TOKEN)//توكن بوتك
