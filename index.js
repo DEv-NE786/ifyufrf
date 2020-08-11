@@ -1359,59 +1359,92 @@ let content = msg.content.split('').map(letter => emojiChars[letter]).join(' ');
 return msg.channel.send(`${content ? content : 'Failed to emojify'}`);
   }
 });
+const Enmap = require('enmap');
+const EnmapSQLite = require('enmap-sqlite');
+const { token, defaultSettings } = require('./config.json');
 
-const commandFiles = readdirSync(join(__dirname, "commands")).filter((file) => file.endsWith(".js"));
-for (const file of commandFiles) {
-  const command = require(join(__dirname, "commands", `${file}`));
-  client.commands.set(command.name, command);
+const files = fs.readdirSync('./commands');
+const events = fs.readdirSync('./events');
+if (!files.length) throw Error('No command files found!');
+if (!events.length) throw Error('No event files found!');
+const jsfiles = files.filter(c => c.split('.').pop() === 'js');
+const jsevents = events.filter(c => c.split('.').pop() === 'js');
+
+class Client extends Discord.Client {
+  constructor() {
+    super();
+
+    this.commands = new Discord.Collection();
+
+    this.aliases = new Discord.Collection();
+
+    this.playlists = new Discord.Collection();
+
+    this.embed = require('./util/Embeds');
+
+    this.settings = new Enmap({ provider: new EnmapSQLite({ name: 'settings' }) });
+
+
+  }
+
+  setGuildSettings(id, obj) {
+    return this.settings.set(id, obj);
+  }
+
+  addGuildSettings(name, val) {
+    this.guilds.forEach(c => {
+      const id = c.id;
+      const current = this.settings.get(id);
+      current[name] = val;
+      this.settings.set(id, current);
+    });
+  }
+
+  removeGuildSettings(id, name) {
+    const current = this.settings.get(id);
+    delete current[name];
+    this.settings.set(id, current);
+  }
+
+  setDefaultGuildSettings(id) {
+    this.settings.set(id, defaultSettings);
+  }
+
+  setPropSettings(id, name, val) {
+    const current = this.settings.get(id);
+    current[name] = val;
+    this.settings.set(id, current);
+  }
+
+  log(message) {
+    console.log(`[${new Date().toLocaleString()}] > ${message}`);
+  }
 }
 
-client.on("message", async (message) => {
-  if (message.author.bot) return;
-  if (!message.guild) return;
+const client = new Client();
 
-  const prefixRegex = new RegExp(`^(<@!?${client.user.id}>|${escapeRegex(PREFIX)})\\s*`);
-  if (!prefixRegex.test(message.content)) return;
-
-  const [, matchedPrefix] = message.content.match(prefixRegex);
-
-  const args = message.content.slice(matchedPrefix.length).trim().split(/ +/);
-  const commandName = args.shift().toLowerCase();
-
-  const command =
-    client.commands.get(commandName) ||
-    client.commands.find((cmd) => cmd.aliases && cmd.aliases.includes(commandName));
-
-  if (!command) return;
-
-  if (!cooldowns.has(command.name)) {
-    cooldowns.set(command.name, new Collection());
-  }
-
-  const now = Date.now();
-  const timestamps = cooldowns.get(command.name);
-  const cooldownAmount = (command.cooldown || 1) * 1000;
-
-  if (timestamps.has(message.author.id)) {
-    const expirationTime = timestamps.get(message.author.id) + cooldownAmount;
-
-    if (now < expirationTime) {
-      const timeLeft = (expirationTime - now) / 1000;
-      return message.reply(
-        `please wait ${timeLeft.toFixed(1)} more second(s) before reusing the \`${command.name}\` command.`
-      );
+for (let i = 0; i < jsfiles.length; i++) {
+  if (!jsfiles.length) throw Error('No javascript command files found!');
+  const file = require(`./commands/${jsfiles[i]}`);
+  const command = new file(client);
+  if (typeof command.run !== 'function') throw Error(`No run function found in ${jsfiles[i]}`);
+  client.commands.set(command.name, command);
+  client.log(`Command loaded: ${command.name} `);
+  if (command && command.aliases && command.aliases.constructor.name === 'Array') {
+    for (let i = 0; i < command.aliases.length; i++) {
+      client.aliases.set(command.aliases[i], command);
     }
   }
+}
 
-  timestamps.set(message.author.id, now);
-  setTimeout(() => timestamps.delete(message.author.id), cooldownAmount);
-
-  try {
-    command.execute(message, args);
-  } catch (error) {
-    console.error(error);
-    message.reply("There was an error executing that command.").catch(console.error);
-  }
-});
-
+for (let i = 0; i < jsevents.length; i++) {
+  if (!jsevents.length) throw Error('No javascript event files found!');
+  const file = require(`./events/${jsevents[i]}`);
+  const event = new file(client, file);
+  client.log(`Event loaded: ${event.name}`);
+  if (typeof event.run !== 'function') throw Error(`No run function found in ${jsevents[i]}`);
+  client.on(jsevents[i].split('.')[0], (...args) => event.run(...args));
+}
+client.login(process.env.TOKEN)//
+process.on('unhandledRejection', err => client.log(err));
 client.login(process.env.TOKEN)//توكن بوتك
