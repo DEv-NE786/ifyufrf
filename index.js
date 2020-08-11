@@ -1,6 +1,6 @@
 
 const Discord = require("discord.js");
-const client = new Client.Discord()
+const client = new Discord.Client()
 client.commands = new Collection();
 client.prefix = PREFIX;
 client.queue = new Map();
