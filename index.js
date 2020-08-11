@@ -1359,12 +1359,5 @@ let content = msg.content.split('').map(letter => emojiChars[letter]).join(' ');
 return msg.channel.send(`${content ? content : 'Failed to emojify'}`);
   }
 });
-client.music = require("discord.js-musicbot-addon");
 
-// Now we start the music module.
-client.music.start(client, {
-  // Set the api key used for YouTube.
-  // This is required to run the bot.
-  youtubeKey: "AIzaSyCgLBLM8Uv1xBFhnvKJ4g7paf8JSUMQVFg"
-});
 client.login(process.env.TOKEN)//توكن بوتك
