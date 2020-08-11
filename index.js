@@ -1393,8 +1393,8 @@ fs.readdir('./commands/', (err, files) => {
 		client.commands.set(props.help.name, props);
 	});
 });
-const config = require('./config/config.json');
-const prefix = config.prefix;
+const config1 = require('./config/config.json');
+const prefix = config1.prefix;
 client.on('message', async message => {
 	if (message.content.startsWith(`${prefix}ping`)) {
 		message.channel.send('Pinging...').then(r => {
