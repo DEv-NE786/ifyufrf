@@ -1,10 +1,6 @@
 
 const Discord = require("discord.js");
 const client = new Discord.Client()
-client.commands = new Collection();
-client.prefix = PREFIX;
-client.queue = new Map();
-const cooldowns = new Collection();
 require('events').EventEmitter.defaultMaxListeners = 300
 const cmd = require("node-cmd");
 const ms = require("ms");
